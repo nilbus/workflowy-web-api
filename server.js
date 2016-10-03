@@ -1,7 +1,8 @@
 var connect = require('connect');
 var bodyParser = require('body-parser');
 var http = require('http');
-const PORT=8080;
+var process = require('process');
+const PORT = process.env['PORT'];
 
 function handleRequest(request, response) {
   var body = request.body;

@@ -5,5 +5,6 @@ WORKDIR /usr/src/app/
 COPY package.json .
 RUN npm install
 COPY . .
-EXPOSE 8080
+ENV PORT 8089
+EXPOSE $PORT
 CMD ["npm", "start"]
