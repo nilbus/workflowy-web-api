@@ -6,6 +6,8 @@ const PORT = process.env['PORT'];
 
 function handleRequest(request, response) {
   var body = request.body;
+  response.write(JSON.stringify(process.env));
+  response.write("\n");
   response.end('It Works!! Path Hit: ' + request.url + "\nbody: " + JSON.stringify(body));
 }
 
